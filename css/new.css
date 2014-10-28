@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+  box-sizing: border-box;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ------- Baseline Elements ------ */
+/* -------------------------------- */
+body {
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: georgia;
+  line-height: 1.75;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper picture{
+	margin-left: auto;
+	margin-right: auto;
+}
+/* ------------ Header ------------ */
+/* -------------------------------- */
+header{
+  text-align: center;
+  margin-top: 2rem
+}
+
+.col-2{
+/*	border: 1px solid #639BF1;
+*/}
+
+.col-3{
+/*	border: 1px solid #CF171A;
+*/}
+
+.col-4{
+/*	border: 1px solid #17D438;
+*/}
+
+/* ------------- Grid ------------- */
+/* -------------------------------- */
+@media screen and (max-width: 512px) {
+  picture {
+	  display: block;
+	  /*max-width: 100%;*/
+	  width:80%;
+	  overflow: hidden;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .col-container {
+    margin: 3rem 0;
+	max-width: 597px;
+  }
+  picture {
+	  display: block;
+	  max-width: 100%;
+	  overflow: hidden;
+	  
+	  
+  }
+
+}
+
+@media screen and (max-width: 800px){
+
+  .wrapper{
+	  padding: 2%;
+  }
+  .col-container {
+    margin: 3rem 0;
+	max-width: 797px;
+  }
+  .col-2, .col-3 {
+	  display: inline;
+	  max-width: 397px;
+	  
+  }
+  .col-4{
+	  overflow: hidden;
+  }
+  .col-4 picture {
+	  display: block;
+  }
+}
+@media screen and (max-width: 1020px) and (min-width: 1020px) {
+    .wrapper{
+	  padding: 2%;
+  }
+  .col-container {
+    	margin: 3rem 0;
+  }
+ .col-2, .col-3 {
+		float: left;
+	}
+	.col-2:after, .col-3:after {
+		margin: auto;
+		float: left;
+	}
+	
+	.col-4{
+		display: block;
+	}
+}
+@media screen and (max-width: 1024px){
+
+    .wrapper{
+	  padding: 2%;
+  }
+  .col-container {
+    margin: 3rem 0;
+  }
+  .col-2, .col-3, .col-4 {
+	  display: inline;
+	  clear: left;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .col-container {
+	display: block;
+  }
+  .col-2, .col-3, .col-4{
+	  display: inline;
+	  overflow: hidden;
+  }
+
+}
+
+}
+
